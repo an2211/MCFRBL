@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="beans.WheelsetTransaction" table="wheelset_tran">
+
+<id name="wheelsetAssetId" type="java.lang.Integer">
+			<column name="wheelset_asset_id"></column>
+			<generator class="increment"></generator>
+		</id>
+            <property name="wheelsetTransactionId" type="string">
+               <column name="wheelset_transaction_id" length="20" /> 
+             </property>
+             <property name="substageId" type="string">
+               <column name="stage_id" length="10" /> 
+             </property> 
+             
+             <property name="previousStageId" type="string">
+               <column name="prev_stage_id" length="20" /> 
+             </property> 
+             
+         <property name="wheeldiscLeftNo" type="string">
+            <column name="wheeldisc_left_no" length="15" />
+        </property>
+         <property name="ctrbLeftNo" type="string">
+            <column name="ctrb_left_no" length="15" />
+        </property>
+         <property name="ctrbLeftMake" type="string">
+            <column name="ctrb_left_make" length="15" />
+        </property>
+        <property name="wheeldiscLeftMake" type="string">
+            <column name="wheeldisc_left_make" length="15" />
+        </property>
+         
+         <property name="leftBrakeDiscMake" type="string">
+            <column name="leftbrakediscmake" length="15" />
+        </property>
+          <property name="leftWheelDiscTon" type="float">
+            <column name="leftwheeldiscton"  />
+        </property>
+        
+         <property name="wheeldiscRightNo" type="string">
+            <column name="wheeldisc_right_no" length="15" />
+        </property>
+         <property name="ctrbRightNo" type="string">
+            <column name="ctrb_right_no" length="15" />
+        </property>
+         <property name="ctrbRightMake" type="string">
+            <column name="ctrb_right_make" length="15" />
+        </property>
+        <property name="wheeldiscRightMake" type="string">
+            <column name="wheeldisc_right_make" length="15" />
+        </property>
+        
+         <property name="rightBrakeDiscMake" type="string">
+            <column name="rightbrakediscmake" length="15" />
+        </property>
+          <property name="rightWheelDiscTon" type="float">
+            <column name="rightwheeldiscton"  />
+        </property>
+        
+        <property name="axleNumber" type="string">
+            <column name="axle_no" length="15" />
+        </property>
+            <property name="axleMake" type="string">
+            <column name="axlemake " length="15" />
+        </property>
+        
+        <property name="assemblyStartDate" type="date">
+            <column name="assembly_start_date" length="10" />
+        </property>
+         <property name="assemblyEndDate" type="date">
+            <column name="assembly_end_date" length="10" />
+        </property>
+      
+         <property name="assemblyDispatchDate" type="date">
+            <column name="assembly_dispatch_date" length="10" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="500" />
+        </property>
+        
+       
+        <property name="transEntryBy" type="string">
+            <column name="transaction_user" length="15" />
+        </property>
+        <property name="transEntryTime" type="string">
+            <column name="transaction_date" length="20" />
+        </property>
+        
+    
+        <property name="asignedFlag" type="java.lang.Integer">
+            <column name="asigned_flag" length="1" />
+        </property>
+        <property name="receiptAtNextStage" type="date">
+            <column name="receipt_at_next_stage" length="10" />
+        </property>
+        
+        <property name="dispatchTo" type="string">
+            <column name="dispatch_to" length="15" />
+        </property>
+        <property name="customer" type="string">
+            <column name="customer" length="15" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>
