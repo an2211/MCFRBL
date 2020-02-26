@@ -23,7 +23,7 @@ public class Details {
 	public String getStageDetails()
 	{     List<Object[]> results;
 		Session session =  null;
-	    System.out.println("hello");
+/*	    System.out.println("hello");*/
 		/*HttpSession session_http = ServletActionContext.getRequest().getSession(true);*/
 		session = HibernateConfig.getSession();
 		String hql="SELECT   C.furnishing_no,  J.substage_description, K.testing_status, K.testing_start_date,K.testing_end_date,K.remark from furnishing_tran A,shell_tran B,paint_tran C,furnishing_stage_master J,testing_mobile_clearance K where A.shell_asset_id  = B.shell_asset_id and B.shell_asset_id= C.shell_asset_id and C.coach_type=J.coach_type and J.substage_id=K.substage_id and A.furnishing_asset_id=K.furnishing_asset_id  and A.assembly_dispatch_date is null and (K.testing_status ='ok')and C.furnishing_no ='"+furnishingNo+"'order by A.furnishing_asset_id";
