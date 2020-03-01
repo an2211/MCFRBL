@@ -28,7 +28,7 @@ public class BogieTypeAction {
 	
 	@SuppressWarnings("unchecked")
 	public String getAssetType()
-	{
+	{  //sysyout;
 		Session session =  null;
 	
 	session = HibernateConfig.getSession();
